@@ -21,6 +21,11 @@ public class Main {
         //crear clientes
         Cliente cliente1 = new Cliente("Samuel ", "Perez", 6785875878L);
         Cliente cliente2 = new Cliente("Andres ", "Suarez", 6743475878L);
+        
+        Empleado empleado1 = new Empleado("Sara Adames ", 3475878L);
+        Empleado empleado2 = new Empleado("Fabio Gonzales ", 5475878L);
+        
+        
 
         //invocar el metodo addcar
         cliente1.addCar(carrito1);
@@ -42,8 +47,13 @@ public class Main {
 
         LocalDate fechaInicio2 = LocalDate.now();
         LocalTime horaInicio2 = LocalTime.now();
-        LocalDate fechaFin2 = LocalDate.of(2024, Month.MARCH, 24);
-        LocalTime horaFin2 = LocalTime.of( 11, 30, 00 );
+        LocalDate fechaFin2 = LocalDate.of(2024, Month.APRIL, 14);
+        LocalTime horaFin2 = LocalTime.of( 12, 30, 00 );
+
+        LocalDate fechaInicio3 = LocalDate.now();
+        LocalTime horaInicio3 = LocalTime.now();
+        LocalDate fechaFin3 = LocalDate.of(2024, Month.FEBRUARY, 14);
+        LocalTime horaFin3 = LocalTime.of( 01, 30, 00 );
 
         
 
@@ -58,20 +68,35 @@ public class Main {
                                             5000L,
                                             cupo1, 
                                             cliente1.misCarros.get(1),
-                                            cliente1
+                                            cliente1,
+                                            empleado1
                                              );
 
 
         Registro registro2 = new Registro(
                                             fechaInicio2,
-                                            horaFin2,
+                                            horaInicio2,
                                             fechaFin2,
                                             horaFin2,
                                             4000L,
                                             cupo2,
                                             cliente2.misCarros.get(0),
-                                            cliente2
+                                            cliente2,
+                                            empleado2
         );
+
+        Registro registro3 = new Registro(
+            fechaInicio3,
+            horaInicio3,
+            fechaFin3,
+            horaFin3,
+            1000L,
+            cupo3,
+            cliente2.misCarros.get(1),
+            cliente2,
+            empleado1
+);
+
 
         //Añadir registro a la lista
 
@@ -94,9 +119,10 @@ public class Main {
                                  r.fechaInicio + 
                                  "|" +
                                  r.horaInicio + 
-                                 "|"
+                                 "| El código del empleado es: " +
+                                 r.empleado.codigoEmpleado 
                                  );}
-           
-        
+
+
     }
 }

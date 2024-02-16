@@ -17,6 +17,7 @@ import java.time.LocalTime;
         public Cupo cupo;
         public Carro carro;
         public Cliente cliente;
+        public Empleado empleado;
 
 
         //Constructores
@@ -25,7 +26,7 @@ import java.time.LocalTime;
 
 
         public Registro(LocalDate fechaInicio, LocalTime horaInicio, LocalDate fechaFin, LocalTime horaFin, Long valor,
-                Cupo cupo, Carro carro, Cliente cliente) {
+                Cupo cupo, Carro carro, Cliente cliente, Empleado empleado) {
             this.fechaInicio = fechaInicio;
             this.horaInicio = horaInicio;
             this.fechaFin = fechaFin;
@@ -34,6 +35,7 @@ import java.time.LocalTime;
             this.cupo = cupo;
             this.carro = carro;
             this.cliente = cliente;
+            this.empleado = empleado;
         }
 
         
